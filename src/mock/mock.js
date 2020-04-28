@@ -14,7 +14,7 @@ export default {
           count: todo.record.filter(data => {
             if (data.checked == false) return true;
             return false;
-          }).length, // 过滤到record里面 ‘checked’ 为true的数据，因为它们已经被完成了
+          }).length, // 过滤record里面 ‘checked’ 为true的数据，因为它们已经被完成了
           locked: todo.locked,
           isDelete: todo.isDelete
         };
@@ -53,7 +53,7 @@ export default {
 
     // 获取单个todo列表
     mock.onGet('todo/listId').reply(config => {
-      let { id } = config.params;
+      let id = config.params.id;
       let todo = Todos.find(todo => {
         return id && todo.id === id;
       });

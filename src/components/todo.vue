@@ -82,11 +82,11 @@ export default {
 				let { id, title, count, isDelete, locked, record } = res.data.todo;
 				this.items = record;
 				this.todo = {
-					id: id,
-					title: title,
-					count: count,
-					locked: locked,
-					isDelete: isDelete
+					id,
+					title,
+					count,
+					locked,
+					isDelete
 				}
 			})
 		},
