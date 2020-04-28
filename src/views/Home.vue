@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
-</template>
-
+	<section class="container" :class="{'menu-open':menuOpen}">
+		<section class="menu">
+			<menus></menus>
+		</section>
+		<section>
+			<div class="content-overlay" @click="updateMenu"></div>
+			<div class="content-container">
+				<router-view></router-view>
+			</div>
+		</section>
+	</section>
+</template> 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import Menus from '../components/menus'
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
+	name: "Home",
+	components: {
+		Menus,
+	},
+	computed: {
+		menuOpen() {
+			return this.$store.state.menuOpen;
+		}
+	},
+	methods: {
+		updateMenu() {
+			this.$store.dispatch('updateMenu')
+		}
+	},
 };
 </script>
+<style lang="less">
+@import '../common/style/layout.less';
+</style>
