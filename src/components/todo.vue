@@ -17,7 +17,7 @@
 					<span class="icon-list-unordered"></span>
 				</a>
 			</div>
-			<h1 class="title-page" @click="isUpdate = false" v-show="!isUpdate">
+			<h1 class="title-page" @click="isUpdate = true" v-show="!isUpdate">
 				<span class="title-wrapper" :disabled="todo.locked">{{todo.title}}</span>
 				<span class="count-list">{{todo.count || 0}}</span>
 			</h1>
