@@ -1,24 +1,5 @@
-# micro-to-do
+# vue todo list
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+vue router导航
+vuex存放数据
+axios + mock.js 模拟从后端获取数据
